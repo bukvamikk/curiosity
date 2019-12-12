@@ -1,0 +1,11 @@
+.camera-photos {
+    max-width: 80%;
+}
+
+#curiosityTest {
+    display:flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+}
