@@ -20,8 +20,15 @@ function getCuriosityPictures() {
             console.log(data);
             console.log(data.photos[0]);
             console.log(data.photos.length);
-
             let newInnerHTML = '';
+            
+            if(data.photos.length === 0 ) {
+                newInnerHTML = `
+                <div class="alert alert-warning" role="alert">
+  This is a warning alert—check it out!
+</div>
+                `
+            }
 
             data.photos.forEach(photo => {
                 console.log(photo.img_src)
