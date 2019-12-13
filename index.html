@@ -1,56 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>BM Curiosity</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="src/css/bootstrap.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
     <link rel="stylesheet" href="src/css/style.css">
     <link rel="icon" type="image/png" href="src/images/favicon.png">
-    
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 </head>
+
 <body>
     <div class="container">
-        <div class="row d-flex justify-content-center my-2">
+        <div class="row holder-row">
+            <div class="col-4">
+                <div class="col-12 mb-4">
 
-            <div class="col-sm-4">
-                <label class="sr-only" for="inlineFormInputGroup">Date</label>
-                <div class="input-group mb-2">
-                    <div class="input-group-prepend">
-                        <div class="input-group-text"><i class="fas fa-globe"></i></div>
+                    <h1>Eyes of <span class="curiosiry-name" data-toggle="tooltip" data-placement="right" title="Tooltip on top">Curiosity</span></h1>
+                    <p>
+                        Hi there, this is an exercise project of mine. On this page, you can choose a date (from the
+                        landing date of Curiosity, until 2019.09.28) and one of the rover's camera to see some wonderful
+                        photos from the red planet.
+                    </p>
+                </div>
+                <div class="col-12">
+                    <label class="sr-only" for="inlineFormInputGroup">Date</label>
+                    <div class="input-group mb-2">
+                        <div class="input-group-prepend">
+                            <div class="input-group-text"><i class="fas fa-globe"></i></div>
+                        </div>
+                        <input type="text" class="form-control" id="earthDateChooser" placeholder="Pick an earth date">
                     </div>
-                    <input type="text" class="form-control" id="earthDateChooser" placeholder="Pick an earth date">
+                </div>
+                <div class="col-12">
+                    <div class="input-group mb-2">
+                        <div class="input-group-prepend">
+                            <div class="input-group-text"><i class="fas fa-camera"></i></div>
+                        </div>
+                        <select class="custom-select mr-sm-2" id="cameraChooser">
+                            <option selected>Choose a camera </option>
+                            <option value="FHAZ"> Front Hazard Avoidance Camera </option>
+                            <option value="RHAZ"> Rear Hazard Avoidance Camera </option>
+                            <option value="MAST"> Mast Camera </option>
+                            <option value="CHEMCAM"> Chemistry and Camera Complex </option>
+                            <option value="MAHLI"> Mars Hand Lens Imager </option>
+                            <option value="MARDI"> Mars Descent Imager </option>
+                            <option value="NAVCAM"> Navigation Camera</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-12 my-4">
+                    <button class="btn btn-primary btn-block" onclick="getCuriosityPictures()"><i class="fas fa-user-astronaut pr-2"></i>Take me to the Mars!</button>
+                </div>
+                <div class="col-12" id="detailsDiv"></div>
+
+            </div>
+
+
+
+
+
+            <div class="col-8">
+                <div class="col-12 text-center curiosity-photos" id="curiosityCameraResults">
+                    
                 </div>
             </div>
-            <div class="col-sm-4">
-                <div class="input-group mb-2">
-                    <div class="input-group-prepend">
-                        <div class="input-group-text"><i class="fas fa-camera"></i></div>
-                    </div>
-                    <select class="custom-select mr-sm-2" id="cameraChooser">
-                        <option selected>Choose a camera </option>
-                        <option value="FHAZ"> Front Hazard Avoidance Camera </option>
-                        <option value="RHAZ"> Rear Hazard Avoidance Camera </option>
-                        <option value="MAST"> Mast Camera </option>
-                        <option value="CHEMCAM"> Chemistry and Camera Complex </option>
-                        <option value="MAHLI"> Mars Hand Lens Imager </option>
-                        <option value="MARDI"> Mars Descent Imager </option>
-                        <option value="NAVCAM"> Navigation Camera</option>
-                    </select>
-                </div>
-            </div>
-            <div class="col-auto">
-                <button class="btn btn-primary" onclick="getCuriosityPictures()">Submit</button>
-            </div>
-            <div class="col-10 text-center curiosity-photos" id="curiosityTest">
-            </div>
+
+
         </div>
     </div>
+
     <script src="src/js/main.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 </body>

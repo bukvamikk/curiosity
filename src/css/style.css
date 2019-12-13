@@ -1,11 +1,25 @@
 .camera-photos {
-    max-width: 80%;
+    max-width: 100%;
 }
 
-#curiosityTest {
-    display:flex;
-    flex-wrap: wrap;
+.holder-row{
+    height: 100vh;
+    align-items: center;
+}
+
+.input-group > .form-control:not(:first-child), .input-group > .custom-select:not(:first-child) {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    max-width: 272px;
+}
+
+#curiosityCameraResults {
+    display: flex;
     flex-direction: column;
     align-content: center;
     align-items: center;
+    height: 774px;
+    width: 730px;
+    overflow-x: hidden;
+    background-image: url('../images/mars.svg');
 }
