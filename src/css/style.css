@@ -1,3 +1,11 @@
+.tooltip_templates {
+     display: none; 
+}
+
+.tooltipster-content{
+    width: 320px;
+}
+
 .camera-photos {
     max-width: 100%;
 }
@@ -25,4 +33,10 @@
     background-image: url('../images/mars.svg');
     background-repeat: no-repeat;
     background-size:cover ;
+}
+
+sup {
+    top: -0.9em;
+    left: -0.3em;
+    font-size: 50%;
 }

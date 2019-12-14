@@ -39,6 +39,7 @@ function getCuriosityPictures() {
                 Number of photos taken this sol from <i>${photo.camera.full_name}</i>: <strong>${data.photos.length}</strong><br>
                 Earth date: <strong>${photo.earth_date}</strong> <br>
                 Sol: <strong>${photo.sol}</strong> <br>
+                <span class="small font-italic d-block mt-2"> Sol (borrowed from the Latin word for sun) is a Mars solar day; that is, a Mars-day.  A Martian day — is 24 hours, 39 minutes and 35.244 seconds. Equivalent to 1.02749125 Earth days.</span>
                 </p>
                 </div>
                 `;
@@ -56,6 +57,8 @@ function getCuriosityPictures() {
     request.send()
 }
 
-$('[data-toggle="tooltip"]').tooltip();
-
+$('.tooltipster').tooltipster({
+    theme: 'tooltipster-borderless',
+    height: 320,
+});
 $("#earthDateChooser").datepicker({ minDate: new Date(2012, 7, 6), maxDate: new Date(2019, 9, 28), dateFormat: 'yy-m-d', changeYear: true });

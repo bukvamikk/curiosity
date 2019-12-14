@@ -6,13 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>BM Curiosity</title>
+    <link rel="icon" type="image/png" href="src/images/favicon.png">
     <link rel="stylesheet" href="src/css/bootstrap.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
     <link rel="stylesheet" href="src/css/style.css">
-    <link rel="icon" type="image/png" href="src/images/favicon.png">
-    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
-    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <link rel="stylesheet" href="src/css/jquery-ui.css">
+    <link rel="stylesheet" href="src/css/tooltipster.bundle.css">
+    <link rel="stylesheet" href="src/css/tooltipster-borderless.min.css">
+    <script src="src/js/jquery-3.4.1.min.js"></script>
+    <script src="src/js/jquery-ui.js"></script>
+    <script src="src/js/tooltipster.bundle.min.js"></script>
 </head>
 
 <body>
@@ -21,7 +24,8 @@
             <div class="col-12 col-lg-4">
                 <div class="col-12 mb-4">
 
-                    <h1 class="my-4">Eyes of <span class="curiosiry-name" data-toggle="tooltip" data-placement="right" title="Tooltip on top">Curiosity</span></h1>
+                    <h1 class="my-4">Eyes of <span class="curiosiry-name tooltipster" data-tooltip-content="#tooltip_content" >Curiosity <sup><i class="fas fa-info-circle"></i></sup></span>
+                    </h1>
                     <p>
                         Hi there, this is an exercise project of mine. On this page, you can choose a date (from the
                         landing date of Curiosity, until 2019.09.28) and one of the rover's camera to see some wonderful
@@ -55,28 +59,43 @@
                     </div>
                 </div>
                 <div class="col-12 my-4">
-                    <button class="btn btn-primary btn-block" onclick="getCuriosityPictures()"><i class="fas fa-user-astronaut pr-2"></i>Take me to Mars!</button>
+                    <button class="btn btn-danger btn-block" onclick="getCuriosityPictures()"><i
+                            class="fas fa-user-astronaut pr-2"></i>Take me to Mars!</button>
                 </div>
                 <div class="col-12" id="detailsDiv"></div>
 
             </div>
 
-
-
-
-
             <div class="col-12 col-lg-8">
                 <div class="col-12 text-center curiosity-photos" id="curiosityCameraResults">
-                    
+
                 </div>
             </div>
-
 
         </div>
     </div>
 
+    <span class="tooltip" data-tooltip-content="#tooltip_content">This span has a tooltip with HTML when you hover over
+        it!</span>
+
+    <div class="tooltip_templates">
+        <span id="tooltip_content">
+            The Mars Science Laboratory and its rover centerpiece, Curiosity, is the most ambitious Mars mission yet flown by NASA.
+             The rover landed on Mars in 2012 with a primary mission to find out if Mars is, or was, suitable for life. 
+             Another objective is to learn more about the Red Planet's environment.
+        </span>
+
+        <span id="tooltip_content_sol">
+            The Mars Science Laboratory and its rover centerpiece, Curiosity, is the most ambitious Mars mission yet flown by NASA.
+             The rover landed on Mars in 2012 with a primary mission to find out if Mars is, or was, suitable for life. 
+             Another objective is to learn more about the Red Planet's environment.
+        </span>
+
+    </div>
+
+
     <script src="src/js/main.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script src="src/js/bootstrap.min.js"></script>
 </body>
 
 </html>
