@@ -45,7 +45,7 @@ function getCuriosityPictures() {
                 `;
                 curiosityPhotos += `
             
-            <img src="${photo.img_src}" class="camera-photos d-block"> <br> `;
+            <a href="${photo.img_src}" data-lightbox="marsTrip"><img src="${photo.img_src}" class="camera-photos d-block"> </a><br> `;
 
             })
             curiosityCameraResults.innerHTML = curiosityPhotos;

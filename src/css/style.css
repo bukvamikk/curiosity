@@ -1,42 +1,42 @@
 .tooltip_templates {
-     display: none; 
+  display: none;
 }
 
-.tooltipster-content{
-    width: 320px;
+.tooltipster-content {
+  width: 320px;
 }
 
 .camera-photos {
-    max-width: 100%;
+  max-width: 100%;
 }
 
-.holder-row{
-    height: 100vh;
-    align-items: center;
+.holder-row {
+  height: 100vh;
+  align-items: center;
 }
 
 .input-group {
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
-    min-width: 272px;
-    width: 100%;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  min-width: 272px;
+  width: 100%;
 }
 
 #curiosityCameraResults {
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-    align-items: center;
-    height: 774px;
-    width: 730px;
-    overflow-x: hidden;
-    background-image: url('../images/mars.svg');
-    background-repeat: no-repeat;
-    background-size:cover ;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  height: 774px;
+  width: 730px;
+  overflow-x: hidden;
+  background-image: url("../images/mars.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 sup {
-    top: -0.9em;
-    left: -0.3em;
-    font-size: 50%;
+  top: -0.9em;
+  left: -0.3em;
+  font-size: 50%;
 }
