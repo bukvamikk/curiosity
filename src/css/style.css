@@ -7,10 +7,11 @@
     align-items: center;
 }
 
-.input-group > .form-control:not(:first-child), .input-group > .custom-select:not(:first-child) {
+.input-group {
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
-    max-width: 272px;
+    min-width: 272px;
+    width: 100%;
 }
 
 #curiosityCameraResults {
@@ -22,4 +23,6 @@
     width: 730px;
     overflow-x: hidden;
     background-image: url('../images/mars.svg');
+    background-repeat: no-repeat;
+    background-size:cover ;
 }

@@ -18,10 +18,10 @@
 <body>
     <div class="container">
         <div class="row holder-row">
-            <div class="col-4">
+            <div class="col-12 col-lg-4">
                 <div class="col-12 mb-4">
 
-                    <h1>Eyes of <span class="curiosiry-name" data-toggle="tooltip" data-placement="right" title="Tooltip on top">Curiosity</span></h1>
+                    <h1 class="my-4">Eyes of <span class="curiosiry-name" data-toggle="tooltip" data-placement="right" title="Tooltip on top">Curiosity</span></h1>
                     <p>
                         Hi there, this is an exercise project of mine. On this page, you can choose a date (from the
                         landing date of Curiosity, until 2019.09.28) and one of the rover's camera to see some wonderful
@@ -42,7 +42,7 @@
                         <div class="input-group-prepend">
                             <div class="input-group-text"><i class="fas fa-camera"></i></div>
                         </div>
-                        <select class="custom-select mr-sm-2" id="cameraChooser">
+                        <select class="custom-select " id="cameraChooser">
                             <option selected>Choose a camera </option>
                             <option value="FHAZ"> Front Hazard Avoidance Camera </option>
                             <option value="RHAZ"> Rear Hazard Avoidance Camera </option>
@@ -55,7 +55,7 @@
                     </div>
                 </div>
                 <div class="col-12 my-4">
-                    <button class="btn btn-primary btn-block" onclick="getCuriosityPictures()"><i class="fas fa-user-astronaut pr-2"></i>Take me to the Mars!</button>
+                    <button class="btn btn-primary btn-block" onclick="getCuriosityPictures()"><i class="fas fa-user-astronaut pr-2"></i>Take me to Mars!</button>
                 </div>
                 <div class="col-12" id="detailsDiv"></div>
 
@@ -65,7 +65,7 @@
 
 
 
-            <div class="col-8">
+            <div class="col-12 col-lg-8">
                 <div class="col-12 text-center curiosity-photos" id="curiosityCameraResults">
                     
                 </div>
